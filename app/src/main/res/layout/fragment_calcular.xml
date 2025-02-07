@@ -5,11 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCorrutinas"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/buttonCorrutinas"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCorrutinas">
+
+        <TextView
+            android:id="@+id/textViewRes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+    </ScrollView>
+
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="299dp"
         android:layout_height="67dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="112dp"
         android:ems="10"
         android:hint="Número de números"
         android:inputType="number"
@@ -18,25 +34,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:id="@+id/buttonHilo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hilos"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    <Button
         android:id="@+id/buttonCorrutinas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Corrutinas"
         app:layout_constraintEnd_toEndOf="@+id/buttonHilo"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="@+id/buttonHilo"
         app:layout_constraintTop_toBottomOf="@+id/buttonHilo" />
-
-    <Button
-        android:id="@+id/buttonHilo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
-        android:text="Hilos"
-        app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
-        app:layout_constraintStart_toStartOf="@+id/editTextNumber"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
 
     <ProgressBar
         android:id="@+id/progresoCalculo"
@@ -45,19 +62,19 @@
         android:layout_height="wrap_content"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.523" />
 
-    <TextView
-        android:id="@+id/textViewRes"
+    <Button
+        android:id="@+id/buttonNoti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
+        android:text="Notificacion en 30 segundos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCorrutinas" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
